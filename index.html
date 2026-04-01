@@ -74,6 +74,8 @@
     .card[data-type="physio"]        .card-header { background: #1e4040; }
     .card[data-type="resilienz"]     .card-header { background: #2c3f30; }
     .card[data-type="schlaf"]        .card-header { background: #3a3525; }
+    .card[data-type="sehtest"]       .card-header { background: #1a3a50; }
+    .card[data-type="hoertest"]      .card-header { background: #2a2a40; }
     .card-time { color: var(--mint); font-size: 12px; font-weight: 600; }
     .card-type-badge { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,.65); background: rgba(255,255,255,.10); padding: 2px 9px; border-radius: 10px; }
     .card-body { padding: 1rem 1rem .5rem; flex: 1; }
@@ -116,7 +118,7 @@
       <div class="meta-row">
         <div class="meta-badge">📅 Dienstag, 14. April 2026</div>
         <div class="meta-badge">📍 Der Uhlenspeegel</div>
-        <div class="meta-badge">🎉 31 Events – kostenlos für alle</div>
+        <div class="meta-badge">🎉 47 Events – kostenlos für alle</div>
       </div>
     </div>
     <div class="orange-bar"></div>
@@ -128,12 +130,14 @@
 
   <div class="filter-bar">
     <span class="filter-label">Filtern nach:</span>
-    <button class="filter-btn active" onclick="filterCards('all',this)">Alle (31)</button>
+    <button class="filter-btn active" onclick="filterCards('all',this)">Alle (47)</button>
     <button class="filter-btn" onclick="filterCards('impulsvortrag',this)">Impulsvortrag</button>
     <button class="filter-btn" onclick="filterCards('physio',this)">Physio-Analyse</button>
     <button class="filter-btn" onclick="filterCards('resilienz',this)">Resilienzcheck</button>
     <button class="filter-btn" onclick="filterCards('schlaf',this)">Schlafbarometer</button>
     <button class="filter-btn" onclick="filterCards('escape',this)">Escape-Game</button>
+    <button class="filter-btn" onclick="filterCards('sehtest',this)">Sehtest</button>
+    <button class="filter-btn" onclick="filterCards('hoertest',this)">Hörtest</button>
   </div>
 
   <div class="legend">
@@ -142,11 +146,13 @@
     <div class="legend-item"><div class="legend-dot" style="background:#2c3f30"></div>Resilienzcheck</div>
     <div class="legend-item"><div class="legend-dot" style="background:#3a3525"></div>Schlafbarometer</div>
     <div class="legend-item"><div class="legend-dot" style="background:#3a2f45"></div>Escape-Game Stress</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#1a3a50"></div>Sehtest</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#2a2a40"></div>Hörtest</div>
   </div>
 
   <div class="section-label">
     <div class="line"></div>
-    <span id="event-count">31 Events verfügbar</span>
+    <span id="event-count">47 Events verfügbar</span>
     <div class="line"></div>
   </div>
 
@@ -176,6 +182,12 @@
         <div class="card-body"><div class="card-title">Schlafbarometer</div><div class="card-room"><span class="room-text">📍 2.17 Haus 1</span></div></div>
         <div class="card-footer"><a href="https://lets-meet.org/reg/b5e0591cea7f296a41" class="register-btn" target="_blank" rel="noopener">Anmelden →</a></div>
       </div>
+    
+      <div class="card" data-type="sehtest">
+        <div class="card-header"><span class="card-time">10:00 – 10:15</span><span class="card-type-badge">Sehtest</span></div>
+        <div class="card-body"><div class="card-title">Sehtest GT</div><div class="card-room"><span class="room-text">📍 2.16 Haus 1</span></div></div>
+        <div class="card-footer"><a href="https://lets-meet.org/reg/c0238d275d2076191a" class="register-btn" target="_blank" rel="noopener">Anmelden →</a></div>
+      </div>
     </div>
   </div>
 
@@ -192,6 +204,12 @@
         <div class="card-header"><span class="card-time">10:30 – 10:50</span><span class="card-type-badge">Schlafbarometer</span></div>
         <div class="card-body"><div class="card-title">Schlafbarometer</div><div class="card-room"><span class="room-text">📍 2.17 Haus 1</span></div></div>
         <div class="card-footer"><a href="https://lets-meet.org/reg/8887bca9fc23f6d733" class="register-btn" target="_blank" rel="noopener">Anmelden →</a></div>
+      </div>
+    
+      <div class="card" data-type="sehtest">
+        <div class="card-header"><span class="card-time">10:35 – 10:50</span><span class="card-type-badge">Sehtest</span></div>
+        <div class="card-body"><div class="card-title">Sehtest GT</div><div class="card-room"><span class="room-text">📍 2.16 Haus 1</span></div></div>
+        <div class="card-footer"><a href="https://lets-meet.org/reg/020be53725eec4a872" class="register-btn" target="_blank" rel="noopener">Anmelden →</a></div>
       </div>
     </div>
   </div>
@@ -239,6 +257,17 @@
         <div class="card-body"><div class="card-title">Schlafbarometer</div><div class="card-room"><span class="room-text">📍 2.17 Haus 1</span></div></div>
         <div class="card-footer"><a href="https://lets-meet.org/reg/e135ba012e40a8a507" class="register-btn" target="_blank" rel="noopener">Anmelden →</a></div>
       </div>
+    
+      <div class="card" data-type="sehtest">
+        <div class="card-header"><span class="card-time">11:10 – 11:25</span><span class="card-type-badge">Sehtest</span></div>
+        <div class="card-body"><div class="card-title">Sehtest GT</div><div class="card-room"><span class="room-text">📍 2.16 Haus 1</span></div></div>
+        <div class="card-footer"><a href="https://lets-meet.org/reg/151b5663e096ea1d5f" class="register-btn" target="_blank" rel="noopener">Anmelden →</a></div>
+      </div>
+      <div class="card" data-type="hoertest">
+        <div class="card-header"><span class="card-time">11:00 – 11:30</span><span class="card-type-badge">Hörtest</span></div>
+        <div class="card-body"><div class="card-title">Hörtest GT</div><div class="card-room"><span class="room-text">📍 1.18 Haus 1</span></div></div>
+        <div class="card-footer"><a href="https://lets-meet.org/reg/f82353104899625272" class="register-btn" target="_blank" rel="noopener">Anmelden →</a></div>
+      </div>
     </div>
   </div>
 
@@ -255,6 +284,17 @@
         <div class="card-header"><span class="card-time">11:30 – 11:50</span><span class="card-type-badge">Schlafbarometer</span></div>
         <div class="card-body"><div class="card-title">Schlafbarometer</div><div class="card-room"><span class="room-text">📍 2.17 Haus 1</span></div></div>
         <div class="card-footer"><a href="https://lets-meet.org/reg/3609aadcb2b3b273d0" class="register-btn" target="_blank" rel="noopener">Anmelden →</a></div>
+      </div>
+    
+      <div class="card" data-type="sehtest">
+        <div class="card-header"><span class="card-time">11:45 – 12:00</span><span class="card-type-badge">Sehtest</span></div>
+        <div class="card-body"><div class="card-title">Sehtest GT</div><div class="card-room"><span class="room-text">📍 2.16 Haus 1</span></div></div>
+        <div class="card-footer"><a href="https://lets-meet.org/reg/28f8cd8e16c823d70b" class="register-btn" target="_blank" rel="noopener">Anmelden →</a></div>
+      </div>
+      <div class="card" data-type="hoertest">
+        <div class="card-header"><span class="card-time">11:50 – 12:20</span><span class="card-type-badge">Hörtest</span></div>
+        <div class="card-body"><div class="card-title">Hörtest GT</div><div class="card-room"><span class="room-text">📍 1.18 Haus 1</span></div></div>
+        <div class="card-footer"><a href="https://lets-meet.org/reg/c205ff7ae25eac85f5" class="register-btn" target="_blank" rel="noopener">Anmelden →</a></div>
       </div>
     </div>
   </div>
@@ -280,6 +320,12 @@
         <div class="card-body"><div class="card-title">Resilienzcheck</div><div class="card-room"><span class="room-text">📍 1.17 Haus 2</span></div></div>
         <div class="card-footer"><a href="https://lets-meet.org/reg/dcd15b49c2134584a1" class="register-btn" target="_blank" rel="noopener">Anmelden →</a></div>
       </div>
+    
+      <div class="card" data-type="sehtest">
+        <div class="card-header"><span class="card-time">12:20 – 12:35</span><span class="card-type-badge">Sehtest</span></div>
+        <div class="card-body"><div class="card-title">Sehtest GT</div><div class="card-room"><span class="room-text">📍 2.16 Haus 1</span></div></div>
+        <div class="card-footer"><a href="https://lets-meet.org/reg/167f28e9e51dd06258" class="register-btn" target="_blank" rel="noopener">Anmelden →</a></div>
+      </div>
     </div>
   </div>
 
@@ -292,6 +338,17 @@
         <div class="card-body"><div class="card-title">Schlafbarometer</div><div class="card-room"><span class="room-text">📍 2.17 Haus 1</span></div></div>
         <div class="card-footer"><a href="https://lets-meet.org/reg/ca349e7fd192a033c1" class="register-btn" target="_blank" rel="noopener">Anmelden →</a></div>
       </div>
+    
+      <div class="card" data-type="hoertest">
+        <div class="card-header"><span class="card-time">12:40 – 13:10</span><span class="card-type-badge">Hörtest</span></div>
+        <div class="card-body"><div class="card-title">Hörtest GT</div><div class="card-room"><span class="room-text">📍 1.18 Haus 1</span></div></div>
+        <div class="card-footer"><a href="https://lets-meet.org/reg/fa319fc79471457c77" class="register-btn" target="_blank" rel="noopener">Anmelden →</a></div>
+      </div>
+      <div class="card" data-type="sehtest">
+        <div class="card-header"><span class="card-time">12:55 – 13:10</span><span class="card-type-badge">Sehtest</span></div>
+        <div class="card-body"><div class="card-title">Sehtest GT</div><div class="card-room"><span class="room-text">📍 2.16 Haus 1</span></div></div>
+        <div class="card-footer"><a href="https://lets-meet.org/reg/32a54d59308ce61ef8" class="register-btn" target="_blank" rel="noopener">Anmelden →</a></div>
+      </div>
     </div>
   </div>
 
@@ -303,6 +360,17 @@
         <div class="card-header"><span class="card-time">13:00 – 13:20</span><span class="card-type-badge">Resilienzcheck</span></div>
         <div class="card-body"><div class="card-title">Resilienzcheck</div><div class="card-room"><span class="room-text">📍 1.17 Haus 2</span></div></div>
         <div class="card-footer"><a href="https://lets-meet.org/reg/92bf8efe8432e66d87" class="register-btn" target="_blank" rel="noopener">Anmelden →</a></div>
+      </div>
+    
+      <div class="card" data-type="sehtest">
+        <div class="card-header"><span class="card-time">13:30 – 13:45</span><span class="card-type-badge">Sehtest</span></div>
+        <div class="card-body"><div class="card-title">Sehtest GT</div><div class="card-room"><span class="room-text">📍 2.16 Haus 1</span></div></div>
+        <div class="card-footer"><a href="https://lets-meet.org/reg/e0904d943d881265e7" class="register-btn" target="_blank" rel="noopener">Anmelden →</a></div>
+      </div>
+      <div class="card" data-type="hoertest">
+        <div class="card-header"><span class="card-time">13:30 – 14:00</span><span class="card-type-badge">Hörtest</span></div>
+        <div class="card-body"><div class="card-title">Hörtest GT</div><div class="card-room"><span class="room-text">📍 1.18 Haus 1</span></div></div>
+        <div class="card-footer"><a href="https://lets-meet.org/reg/98aff580e8717b789f" class="register-btn" target="_blank" rel="noopener">Anmelden →</a></div>
       </div>
     </div>
   </div>
@@ -338,6 +406,17 @@
         <div class="card-body"><div class="card-title">Schlafbarometer</div><div class="card-room"><span class="room-text">📍 2.17 Haus 1</span></div></div>
         <div class="card-footer"><a href="https://lets-meet.org/reg/3dea2e59b31d7753ab" class="register-btn" target="_blank" rel="noopener">Anmelden →</a></div>
       </div>
+    
+      <div class="card" data-type="sehtest">
+        <div class="card-header"><span class="card-time">14:05 – 14:20</span><span class="card-type-badge">Sehtest</span></div>
+        <div class="card-body"><div class="card-title">Sehtest GT</div><div class="card-room"><span class="room-text">📍 2.16 Haus 1</span></div></div>
+        <div class="card-footer"><a href="https://lets-meet.org/reg/17278343b357538b43" class="register-btn" target="_blank" rel="noopener">Anmelden →</a></div>
+      </div>
+      <div class="card" data-type="hoertest">
+        <div class="card-header"><span class="card-time">14:20 – 14:50</span><span class="card-type-badge">Hörtest</span></div>
+        <div class="card-body"><div class="card-title">Hörtest GT</div><div class="card-room"><span class="room-text">📍 1.18 Haus 1</span></div></div>
+        <div class="card-footer"><a href="https://lets-meet.org/reg/9eca3955c5af3ca0f6" class="register-btn" target="_blank" rel="noopener">Anmelden →</a></div>
+      </div>
     </div>
   </div>
 
@@ -366,6 +445,12 @@
         <div class="card-header"><span class="card-time">14:30 – 14:50</span><span class="card-type-badge">Schlafbarometer</span></div>
         <div class="card-body"><div class="card-title">Schlafbarometer</div><div class="card-room"><span class="room-text">📍 2.17 Haus 1</span></div></div>
         <div class="card-footer"><a href="https://lets-meet.org/reg/b5161d6ddeac700489" class="register-btn" target="_blank" rel="noopener">Anmelden →</a></div>
+      </div>
+    
+      <div class="card" data-type="sehtest">
+        <div class="card-header"><span class="card-time">14:40 – 14:55</span><span class="card-type-badge">Sehtest</span></div>
+        <div class="card-body"><div class="card-title">Sehtest GT</div><div class="card-room"><span class="room-text">📍 2.16 Haus 1</span></div></div>
+        <div class="card-footer"><a href="https://lets-meet.org/reg/18b744b8ad1c78fb37" class="register-btn" target="_blank" rel="noopener">Anmelden →</a></div>
       </div>
     </div>
   </div>
@@ -406,6 +491,17 @@
         <div class="card-body"><div class="card-title">Schlafbarometer</div><div class="card-room"><span class="room-text">📍 2.17 Haus 1</span></div></div>
         <div class="card-footer"><a href="https://lets-meet.org/reg/8fc17592841ba21df1" class="register-btn" target="_blank" rel="noopener">Anmelden →</a></div>
       </div>
+    
+      <div class="card" data-type="sehtest">
+        <div class="card-header"><span class="card-time">15:15 – 15:30</span><span class="card-type-badge">Sehtest</span></div>
+        <div class="card-body"><div class="card-title">Sehtest GT</div><div class="card-room"><span class="room-text">📍 2.16 Haus 1</span></div></div>
+        <div class="card-footer"><a href="https://lets-meet.org/reg/23bee80ffda8afb0ea" class="register-btn" target="_blank" rel="noopener">Anmelden →</a></div>
+      </div>
+      <div class="card" data-type="hoertest">
+        <div class="card-header"><span class="card-time">15:10 – 15:40</span><span class="card-type-badge">Hörtest</span></div>
+        <div class="card-body"><div class="card-title">Hörtest GT</div><div class="card-room"><span class="room-text">📍 1.18 Haus 1</span></div></div>
+        <div class="card-footer"><a href="https://lets-meet.org/reg/02ae79e9da272322d7" class="register-btn" target="_blank" rel="noopener">Anmelden →</a></div>
+      </div>
     </div>
   </div>
 
@@ -432,21 +528,32 @@
   </footer>
 
 </div>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  function filterCards(type, btn) {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+
+<script>
+(function() {
+  window.filterCards = function(type, btn) {
+    var btns = document.querySelectorAll('.filter-btn');
+    for (var i = 0; i < btns.length; i++) btns[i].classList.remove('active');
     btn.classList.add('active');
-    const blocks = document.querySelectorAll('.time-block');
-    let total = 0;
-    blocks.forEach(block => {
-      const cards = block.querySelectorAll('.card');
-      let vis = 0;
-      cards.forEach(c => {
-        const show = type === 'all' || c.dataset.type === type;
-        c.style.display = show ? 'flex' : 'none';
+    var blocks = document.querySelectorAll('.time-block');
+    var total = 0;
+    for (var b = 0; b < blocks.length; b++) {
+      var cards = blocks[b].querySelectorAll('.card');
+      var vis = 0;
+      for (var c = 0; c < cards.length; c++) {
+        var show = (type === 'all' || cards[c].getAttribute('data-type') === type);
+        cards[c].style.display = show ? 'flex' : 'none';
         if (show) vis++;
-      });
-      block.style.display = vis > 0 ? 'block' : 'none';
+      }
+      blocks[b].style.display = vis > 0 ? 'block' : 'none';
       total += vis;
-    });
-    document
+    }
+    var el = document.getElementById('event-count');
+    if (el) el.textContent = total + (total !== 1 ? ' Events' : ' Event') + ' verfügbar';
+    var nr = document.getElementById('no-results');
+    if (nr) nr.style.display = total === 0 ? 'block' : 'none';
+  };
+})();
+</script>
+</body>
+</html>
